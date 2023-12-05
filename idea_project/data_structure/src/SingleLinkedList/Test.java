@@ -29,6 +29,7 @@ public class Test {
         linkedList.addLast(6);
         linkedList.addLast(7);
         linkedList.addLast(8);
+        linkedList.addLast(9);
         System.out.println("===============");
         for (Integer list:
                 linkedList) {
