@@ -2,6 +2,7 @@ package BinarySearch;
 
 public class BinarySearch_02 {
     public static int BinarySearchBasic(int[] a,int target){
+        //左闭右开
         int i=0,j=a.length;
         while (i<j){
             int m=i+j >>> 1;

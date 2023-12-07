@@ -3,13 +3,13 @@ package SingleLinkedList;
 import java.util.Iterator;
 import java.util.function.Consumer;
 
-public class LinkedList implements Iterable<Integer>{
-    Node head=null;
-
+public class LinkedList_02 implements Iterable<Integer>{
+    Node head=new Node(666,null);
+    //带哨兵
     @Override
     public Iterator<Integer> iterator() {
         return new Iterator<Integer>() {
-            Node p=head;
+            Node p=head.next;
             @Override
             public boolean hasNext() {
                 return p!=null;
@@ -37,18 +37,18 @@ public class LinkedList implements Iterable<Integer>{
 //            head=new Node(value,null);
 //        else
 //            head=new Node(value,head);
-        head=new Node(value,head);
+        insert(0,value);
     }
 
     public void loop01(Consumer<Integer> consumer){
-        Node p=head;
+        Node p=head.next;
         while (p!=null){
             consumer.accept(p.value);
             p=p.next;
         }
     }
     public void loop02(Consumer<Integer> consumer){
-        for (Node p=head;p!=null;p=p.next){
+        for (Node p = head.next; p!=null; p=p.next){
             consumer.accept(p.value);
         }
     }
@@ -62,15 +62,11 @@ public class LinkedList implements Iterable<Integer>{
 
     public void addLast(int value){
         Node last=findLast();
-        if (last==null){
-            addFirst(value);
-        }
-        else
-            last.next=new Node(value,null);
+        last.next=new Node(value,null);
     }
     private Node findNode(int index){
-        int i=0;
-        for(Node p=head;p!=null;p=p.next,i++){
+        int i=-1;
+        for(Node p = head; p!=null; p=p.next,i++){
             if(i==index){
                 return p;
             }
@@ -87,10 +83,6 @@ public class LinkedList implements Iterable<Integer>{
         return node.value;
     }
     public void insert(int index,int value){
-        if (index==0){
-            addFirst(value);
-            return;
-        }
         Node node = findNode(index - 1);
         if (node==null){
             throw new IllegalArgumentException(
@@ -99,16 +91,9 @@ public class LinkedList implements Iterable<Integer>{
         node.next=new Node(value,node.next);
     }
     public void removeFirst(){
-        if (head==null){
-            System.out.println("链表为空！");
-        }
-        Node p=head.next;
-        head=p;
+        remove(0);
     }
     public void remove(int index){
-        if (index==0){
-            removeFirst();
-        }
         Node node = findNode(index - 1);
         if(node==null){
             throw new IllegalArgumentException(

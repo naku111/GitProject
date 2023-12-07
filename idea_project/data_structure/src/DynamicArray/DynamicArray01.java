@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 public class DynamicArray01 implements Iterable<Integer>{
     private int size=0;
     private int capacity=10;
-    private int[] array={};
+    private int[] array;
     public void addLast(int e){
         check();
         array[size]=e;
