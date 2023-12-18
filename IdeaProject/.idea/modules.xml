@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/IdeaProject.iml" filepath="$PROJECT_DIR$/.idea/IdeaProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/factory_method/factory_method.iml" filepath="$PROJECT_DIR$/factory_method/factory_method.iml" />
       <module fileurl="file://$PROJECT_DIR$/first/src/first.iml" filepath="$PROJECT_DIR$/first/src/first.iml" />
       <module fileurl="file://$PROJECT_DIR$/first/first1.iml" filepath="$PROJECT_DIR$/first/first1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb/javaweb.iml" filepath="$PROJECT_DIR$/javaweb/javaweb.iml" />
     </modules>
   </component>
 </project>
