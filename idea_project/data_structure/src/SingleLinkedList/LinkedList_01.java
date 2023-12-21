@@ -3,7 +3,7 @@ package SingleLinkedList;
 import java.util.Iterator;
 import java.util.function.Consumer;
 
-public class LinkedList implements Iterable<Integer>{
+public class LinkedList_01 implements Iterable<Integer>{
     Node head=null;
 
     @Override

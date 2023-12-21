@@ -2,7 +2,7 @@ package SingleLinkedList;
 
 public class Test {
     public static void main(String[] args) {
-        LinkedList linkedList = new LinkedList();
+        LinkedList_01 linkedList = new LinkedList_01();
         linkedList.addFirst(1);
         linkedList.addFirst(2);
         linkedList.addFirst(3);
