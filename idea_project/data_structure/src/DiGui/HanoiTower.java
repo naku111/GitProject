@@ -30,7 +30,7 @@ public class HanoiTower {
     }
 
     public static void main(String[] args) {
-        init(3);
-        hanoi(3,a,b,c);
+        init(4);
+        hanoi(4,a,b,c);
     }
 }

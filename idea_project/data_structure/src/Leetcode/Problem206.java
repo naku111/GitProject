@@ -51,7 +51,7 @@ public class Problem206 {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode last = reverseList3(head.next);
+        ListNode last = reverseList2(head.next);
         head.next.next = head;
         head.next = null;
         return last;

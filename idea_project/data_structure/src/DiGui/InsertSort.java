@@ -13,13 +13,13 @@ public class InsertSort {
         if(low==a.length)
             return;
         int t=a[low];
-        int i=low-1;
+        int i=low-1;//已排序区域指针
         //找到坑再插入
         while (i>=0&&a[i]>t){
             a[i+1]=a[i];
             i--;
         }
-        if(i+1!=low)
+        if(i+1!=low)//相等时无需赋值
             a[i+1]=t;
         sort(a,low+1);
     }
