@@ -1,2 +1,3 @@
-package Leetcode;public class Problem203 {
+package Leetcode;
+public class Problem203 {
 }
