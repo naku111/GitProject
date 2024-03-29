@@ -1,0 +1,30 @@
+package lanqiaobei02;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner=new Scanner(System.in);
+		int n=scanner.nextInt();
+		int[] a=new int[n];
+		for(int i=0;i<n;i++)
+			a[i]=scanner.nextInt();
+		int[] dp=new int[n];//状态方程存储每个位置最大上升序列个数
+		Arrays.fill(dp, 1);
+		int max=1;
+		for(int i=1;i<n;i++) {
+			for(int j=0;j<i;j++) {
+				if(a[i]>a[j]) {
+					dp[i]=Math.max(dp[j]+1, dp[i]);
+				}
+			}
+			max=Math.max(max, dp[i]);
+		}
+		System.out.println(max);
+	}
+
+}
