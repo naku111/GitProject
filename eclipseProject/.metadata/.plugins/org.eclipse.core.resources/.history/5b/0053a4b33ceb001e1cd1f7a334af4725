@@ -1,0 +1,38 @@
+package datastru;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Firstdemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.println("please input two number");
+		int a=input.nextInt();
+		int b=input.nextInt();
+		
+		boolean[][] one=new boolean[a][a];
+		for(int i=0;i<a;i++) {
+			for(int j=0;j<a;j++) {
+				one[i][j]=true;
+			}
+		}
+		int[][] last=new int[a][a];
+		for(int i=0;i<a;i++) {
+			for(int j=0;j<a;j++) {
+				if(one[i][j]==true)
+				{
+					last[i][j]=0;
+				}
+			}
+		}
+		for(int i=0;i<a;i++) {
+			for(int j=0;j<a;j++) {
+				
+			}
+		}
+		
+	}
+
+}
