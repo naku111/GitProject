@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 动态规划
 		Scanner scanner=new Scanner(System.in);
 		int n=scanner.nextInt();
 		int[] a=new int[n];

@@ -1,0 +1,49 @@
+package demo02;
+
+
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		System.out.println("please input two number");
+		//输入两个整数
+		int a=input.nextInt();
+		int b=input.nextInt();
+		
+		int[][] one=new int[a][a];
+		
+		for(int i=0;i<b;i++) {
+			int q=input.nextInt();
+			int w=input.nextInt();
+			int e=input.nextInt();
+			int r=input.nextInt();
+			reveser(one, q, w, e, r);
+		}
+		for(int[] row : one){
+            for(int col : row) {
+            	System.out.print(col);
+            }
+            	
+            
+            System.out.println();
+        }
+		input.close();
+
+	}
+	public static void reveser(int[][] a,int q,int w,int e,int r) {
+		for(int i=q-1;i<e;i++) {
+			for(int j=w-1;j<r;j++) {
+				if(a[i][j]==0) {
+					a[i][j]=1;
+				}else {
+					a[i][j]=0;
+				}
+			}
+		}
+		
+	}
+
+}

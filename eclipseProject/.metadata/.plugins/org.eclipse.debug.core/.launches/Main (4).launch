@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
@@ -11,3 +12,18 @@
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="First"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="First"/>
 </launchConfiguration>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/Myproject/src/demo5/Main.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="demo5.Main"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="Myproject"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Myproject"/>
+</launchConfiguration>
+>>>>>>> c5fbf8b1ecc525857e32a43697d9c2242dc580de

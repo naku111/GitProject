@@ -1,0 +1,64 @@
+package datastru;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Firstdemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.println("please input two number");
+		//输入两个整数
+		int a=input.nextInt();
+		int b=input.nextInt();
+		
+		int[][] info=new int[b][4];
+		for(int i=0;i<b;i++) {
+			for(int j=0;j<4;j++) {
+				info[i][j]=input.nextInt();
+			}
+		}
+		//初始化矩阵，true为0
+		boolean[][] one=new boolean[a][a];
+		for(int i=0;i<a;i++) {
+			for(int j=0;j<a;j++) {
+				one[i][j]=true;
+			}
+		}
+		//操作
+		for(int i=0;i<b;i++) {
+			int q=info[i][0]-1;
+			int w=info[i][1]-1;
+			int e=info[i][2]-1;
+			int r=info[i][3]-1;
+			for(int j=q;j<=e;j++) {
+				for(int k=w;k<=r;k++) {
+					one[j][k]=!one[j][k];
+				}
+			}
+		}
+		
+		int[][] last=new int[a][a];
+		for(int i=0;i<a;i++) {
+			for(int j=0;j<a;j++) {
+				if(one[i][j]==true)
+				{
+					last[i][j]=0;
+				}
+				else {
+					last[i][j]=1;
+				}
+			}
+		}
+		//打印矩阵
+		for(int i=0;i<a;i++) {
+			System.out.print("\n");
+			for(int j=0;j<a;j++) {
+				System.out.print(last[i][j]);
+			}
+		}
+		
+	}
+
+}
