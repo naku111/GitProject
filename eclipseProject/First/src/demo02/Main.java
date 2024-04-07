@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner input=new Scanner(System.in);
 		System.out.println("please input two number:");
-		//输入两个整数
+		//蓝桥杯：棋盘
 		int a=input.nextInt();
 		int b=input.nextInt();
 		

@@ -24,6 +24,7 @@ public class Main {
 				if(s.contains(a))
 					continue;
 				System.out.print(a+" ");
+				s.add(a);
 			}
 			
 			System.out.println();

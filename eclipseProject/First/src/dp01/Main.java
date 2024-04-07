@@ -1,5 +1,6 @@
 package dp01;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -12,11 +13,10 @@ public class Main {
 		for(int i=0;i<n;i++)
 			a[i]=scanner.nextInt();
 		int[] dp=new int[n];//状态方程存储每个位置最大上升序列个数
-		dp[0]=1;
+		Arrays.fill(dp, 1);
 		int max=1;
 		for(int i=1;i<n;i++) {
 			for(int j=0;j<i;j++) {
-				dp[i]=1;
 				if(a[i]>a[j]) {
 					dp[i]=Math.max(dp[j]+1, dp[i]);
 					//dp【j】不是随着j的增长而增长的，所以我们要取一个max
