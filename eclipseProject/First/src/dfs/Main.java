@@ -24,7 +24,7 @@ public class Main {
 				f[i]=1;
 				t.add(i);
 				dfs(n, f, t);//递归入口
-				t.remove(t.size()-1);
+				t.remove(t.size()-1); 
 				f[i]=0;//退回
 			}
 	}

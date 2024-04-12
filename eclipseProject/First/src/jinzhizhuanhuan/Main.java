@@ -35,9 +35,7 @@ public class Main {
 		}
 		return stringBuilder.reverse().toString();
 	}
-	
 	public static int zhuanhuan_2(int jinzhi,String str) {
-		
 		//别的转换十进制
 		char[] ch=str.toCharArray();
 		int sum=0;

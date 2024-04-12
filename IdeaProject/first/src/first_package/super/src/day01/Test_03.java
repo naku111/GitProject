@@ -7,6 +7,7 @@ import java.util.Date;
 
 public class Test_03 {
     public static void main(String[] args) throws ParseException {
+        //String和Date类互相转化
         Date date=new Date();
         DateFormat df=new SimpleDateFormat("yyyy年MM月dd日");
         String str=df.format(date);

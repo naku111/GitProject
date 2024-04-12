@@ -4,6 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// leetcode.343
+		//分割为几个数，乘积最大
 		System.out.println(integerBreak(10));
 	}
 	public static  int integerBreak(int n) {

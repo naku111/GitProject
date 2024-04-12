@@ -8,6 +8,7 @@ public class Mian {
 
 	public static void main(String[] args) {
 		// 前缀和
+		//sum[i]表示前i个元素的和
 		Scanner scanner=new Scanner(System.in);
 		int n=scanner.nextInt();
 		int[] a=new int[n];
