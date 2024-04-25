@@ -8,8 +8,6 @@ public class Main {
 	s.add(1);
 	s.add(8);
 	s.add(5);
-	s.add(9);
-	s.add(3);
 	System.out.println(s);
 	s.remove();
 	System.out.println(s);
