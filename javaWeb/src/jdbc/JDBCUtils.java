@@ -31,10 +31,10 @@ public class JDBCUtils {
         }
 
         //3. 获取数据，赋值
-        String url = pro.getProperty("url");
-        String user = pro.getProperty("user");
-        String passord = pro.getProperty("passord");
-        String driver = pro.getProperty("driver");
+        url = pro.getProperty("url");
+        user = pro.getProperty("user");
+        passord = pro.getProperty("password");
+        driver = pro.getProperty("driver");
         try {
             Class.forName(driver);
         } catch (ClassNotFoundException e) {

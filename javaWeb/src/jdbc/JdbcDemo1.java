@@ -22,7 +22,7 @@ public class JdbcDemo1 {
 //        String sql="update student set telephone = '46489' where id=1";
 //        String sql1="insert student values (2,'li','56898')";
 //            String sql2="update student set id=4 where id=2";
-            String sql3="delete from student where id=4";
+            String sql3="delete from student where id=1";
 
             //获执行sql的对象，Statement
             statement = connection.createStatement();

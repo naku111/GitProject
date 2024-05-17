@@ -17,7 +17,7 @@ public class JdbcDemo4 {
         Statement statement=null;
         ResultSet resultSet=null;
             try {
-                JDBCUtils.getconnection();//获取连接
+                connection=JDBCUtils.getconnection();//获取连接
 
                 String sql="select * from student order by id desc ";
                 statement = connection.createStatement();
