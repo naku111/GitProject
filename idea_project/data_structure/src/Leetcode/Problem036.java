@@ -7,25 +7,25 @@ public class Problem036 {
         Stack<Integer> list=new Stack<>();
         for (String t:
              tokens) {
-            if(t=="+"){
+            if(t.equals("+")){
                 Integer a=list.pop();
                 Integer b=list.pop();
                 Integer c=b+a;
                 list.push(c);
             }
-            else if(t=="-"){
+            else if(t.equals("-")){
                 Integer a=list.pop();
                 Integer b=list.pop();
                 Integer c=b-a;
                 list.push(c);
             }
-            else if(t=="*"){
+            else if(t.equals("*")){
                 Integer a=list.pop();
                 Integer b=list.pop();
                 Integer c=b*a;
                 list.push(c);
             }
-            else if(t=="/"){
+            else if(t.equals("/")){
                 Integer a=list.pop();
                 Integer b=list.pop();
                 Integer c=b/a;
