@@ -23,7 +23,7 @@ public class JdbcPrepStatement {
         PreparedStatement preparedStatement=null;
         ResultSet resultSet=null;
         try {
-            connection=JDBCUtils.getconnection();//获取连接
+            connection= JDBCUtils_1.getconnection();//获取连接
             String sql="select * from student where name=?";
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,name);
@@ -39,7 +39,7 @@ public class JdbcPrepStatement {
             throw new RuntimeException(e);
         }
         finally {
-            JDBCUtils.close(connection,preparedStatement,resultSet);
+            JDBCUtils_1.close(connection,preparedStatement,resultSet);
         }
 
         return stu;

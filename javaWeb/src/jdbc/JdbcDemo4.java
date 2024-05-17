@@ -17,7 +17,7 @@ public class JdbcDemo4 {
         Statement statement=null;
         ResultSet resultSet=null;
             try {
-                connection=JDBCUtils.getconnection();//获取连接
+                connection= JDBCUtils_1.getconnection();//获取连接
 
                 String sql="select * from student order by id desc ";
                 statement = connection.createStatement();
@@ -34,7 +34,7 @@ public class JdbcDemo4 {
                 throw new RuntimeException(e);
             }
             finally {
-                JDBCUtils.close(connection,statement,resultSet);
+                JDBCUtils_1.close(connection,statement,resultSet);
             }
 
             return stu;

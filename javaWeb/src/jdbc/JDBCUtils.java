@@ -1,76 +1,60 @@
 package jdbc;
 
-import java.io.FileReader;
+import com.alibaba.druid.pool.DruidDataSourceFactory;
+
+import javax.sql.DataSource;
 import java.io.IOException;
-import java.net.URL;
 import java.sql.*;
 import java.util.Properties;
 
+//Druid连接池工具类
+//Druid连接池工具类
+//Druid连接池工具类
 public class JDBCUtils {
-
-    //抽象数据库连接方法和释放资源
-    private static String url;
-    private static String user;
-    private static String passord;
-    private static String driver;
+    private static DataSource dataSource;
 
     static {
-        //1. 创建Properties集合类，用以加载配置文件
-        Properties pro=new Properties();
 
-        //获取src路径下的文件的方式--->ClassLoader 类加载器
-        ClassLoader classLoader=JDBCUtils.class.getClassLoader();
-        URL resource = classLoader.getResource("jdbc.properties");
-        String path = resource.getPath();
-
-        //2. 加载文件
         try {
-            pro.load(new FileReader(path));
+            Properties pro = new Properties();
+            pro.load(JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties"));
+            dataSource = DruidDataSourceFactory.createDataSource(pro);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
-
-        //3. 获取数据，赋值
-        url = pro.getProperty("url");
-        user = pro.getProperty("user");
-        passord = pro.getProperty("password");
-        driver = pro.getProperty("driver");
-        try {
-            Class.forName(driver);
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-
-    //获取数据库连接
     public static Connection getconnection() throws SQLException {
-        return DriverManager.getConnection(url,user,passord);
+        return dataSource.getConnection();
     }
 
-    /*
-    释放资源*/
-    public static void close(Connection connection,Statement statement,ResultSet resultSet){
-        if(resultSet!=null){
-        try {
-            resultSet.close();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+    public static void close(Connection connection, Statement statement, ResultSet resultSet) {
+        if (resultSet != null) {
+            try {
+                resultSet.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         }
-        }
-        if(statement!=null){
+        if (statement != null) {
             try {
                 statement.close();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
         }
-        if (connection!=null){
+        if (connection != null) {
             try {
                 connection.close();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    public static DataSource getDataSource() {
+        return dataSource;
     }
 }
