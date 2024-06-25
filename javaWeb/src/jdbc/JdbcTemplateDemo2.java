@@ -25,7 +25,7 @@ public class JdbcTemplateDemo2 {
         }
 
         System.out.println("===================");
-        List<student> query = jdbcTemplate.query(sql1, new BeanPropertyRowMapper<student>(student.class));
+        List<student> query = jdbcTemplate.query(sql1, new BeanPropertyRowMapper<>(student.class));
         //将查询结果封装成对象的集合
         for (student q:query){
             System.out.println(q);
