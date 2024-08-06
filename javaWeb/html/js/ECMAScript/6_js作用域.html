@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <script>
+    // 如果变量没有使用 var 关键字，该变量为全局变量。
+    //函数内带var关键字的为局部变量
+
+    // 在 HTML 中, 全局变量是 window 对象，所以 window 对象可以调用函数内的未声明（未加 var)的局部变量。
+    carName = "Volvo";
+    document.write(window.carName);
+  </script>
+</body>
+</html>

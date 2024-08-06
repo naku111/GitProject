@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<script>
+  cars=["BMW","Volvo","Saab","Ford"];
+  for (var i=0;i<cars.length;i++){
+    document.write(cars[i] + "<br>");
+  }
+
+  var person={fname:"Bill",lname:"Gates",age:56};
+  var txt='';
+  for (x in person)  // x 为属性名
+  {
+    txt=txt + person[x];
+  }
+  document.write(txt);
+</script>
+
+</body>
+</html>

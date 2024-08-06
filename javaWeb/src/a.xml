@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gbk" ?>
+<users>
+  <user number="1" id="1">
+    <name id="1">wang</name>\
+    <age>22</age>
+    <sex>man</sex>
+  </user>
+  <user number="2">
+    <name id="2">li</name>\
+    <age>22</age>
+    <sex>woman</sex>
+  </user>
+</users>
