@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>课程表</title>
+</head>
+<body>
+  table ：表格<br>
+  caption ：表格标题<br>
+  thead ：表格头部<br>
+  tbody ：表格主体<br>
+  tfoot ：表格注脚<br>
+  tr ：每一行<br>
+  th 、 td ：每一个单元格（备注：表格头部中用 th ，表格主体、表格脚注中用： td ）<br>
+  <br>
+  <br>
+  <table border="1" cellspacing="1">
+    <!-- 表格标题 -->
+    <caption>课程表</caption>
+    <!-- 表格头部 -->
+    <thead>
+      <tr>
+        <th>项目</th>
+        <th colspan="5">上课</th>
+        <th colspan="2">活动与休息</th>
+      </tr>
+    </thead>
+  <!-- 表格主体 -->
+  <!-- rowspan ：指定要跨的行数。
+       colspan ：指定要跨的列数。 -->
+    <tbody>
+      <tr>
+        <td>星期</td>
+        <td>星期一</td>
+        <td>星期二</td>
+        <td>星期三</td>
+        <td>星期四</td>
+        <td>星期五</td>
+        <td>星期六</td>
+        <td>星期日</td>
+      </tr>
+      <tr>
+        <td rowspan="4">上午</td>
+        <td>星期一</td>
+        <td>星期二</td>
+        <td>星期三</td>
+        <td>星期四</td>
+        <td>星期五</td>
+        <td>星期六</td>
+        <td rowspan="4">休息</td>
+      </tr>
+      <tr>
+        <td>王五</td>
+        <td>男</td>
+        <td>20</td>
+        <td>回族</td>
+        <td>党员</td>
+        <td>星期六</td>
+
+      </tr>
+      <tr>
+        <td>赵六</td>
+        <td>女</td>
+        <td>21</td>
+        <td>壮族</td>
+        <td>团员</td>
+        <td>星期六</td>
+      </tr>
+      <tr>
+        <td>赵六</td>
+        <td>女</td>
+        <td>21</td>
+        <td>壮族</td>
+        <td>团员</td>
+        <td>星期六</td>
+      </tr>
+      <tr>
+        <td rowspan="2">下午</td>
+        <td>女</td>
+        <td>21</td>
+        <td>壮族</td>
+        <td>团员</td>
+        <td>星期六</td>
+        <td>星期六</td>
+        <td rowspan="2">休息</td>
+      </tr>
+      <tr>
+        <td>女</td>
+        <td>21</td>
+        <td>壮族</td>
+        <td>团员</td>
+        <td>星期六</td>
+        <td>星期六</td>
+      </tr>
+    </tbody>
+  <!-- 表格脚注 -->
+  <!-- <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>共计：4人</td>
+    </tr>
+  </tfoot> -->
+  </table>
+</body>
+</html>

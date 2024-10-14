@@ -1,6 +1,7 @@
 package Leetcode;
 
 public class Problem231 {
+    //快速幂
     public static void main(String[] args) {
         int a=88888888;
         int b=45345343;
