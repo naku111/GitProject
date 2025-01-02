@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let person_1 = new Object()
+    let person = {
+      name: 'wang',
+      age: 18,
+      gender: 'man',
+      hello: function () {
+        alert('hello')
+      }
+    }
+
+    console.log(person.name)
+    console.log(person['name'])
+
+    person.hello()
+    for (let k in person) {
+      console.log(k)
+      console.log(person[k])
+      // k 是获得对象的属性名， 对象名[k] 是获得 属性值
+    }
+
+  </script>
+</body>
+
+</html>

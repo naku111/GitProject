@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        c = 4;
+        //不加var为全局变量; 没有使用 var 声明，可配置全局属性
+        //在 HTML 中, 全局变量是 window 对象，
+        // 所以 window 对象可以调用函数内的未声明（未加 var)的局部变量。
+        // 注意：所有全局变量都属于 window 对象
+
+
+        // 对于原始值类型（undefined、null、true/false、number、string），
+        // 值就保存在变量指向的那个内存地址（在栈中），
+        // 因此 const 声明的原始值类型变量等同于常量。
+
+        // 对于对象类型（object，array，function等），
+        // 变量指向的内存地址其实是保存了一个指向实际数据的指针，
+        // 所以 const 只能保证指针是不可修改的，
+        // 至于指针指向的数据结构是无法保证其不能被修改的（在堆中）。
+
+        var a = 2;
+        var b = 4;
+        document.write(a + b);
+        document.write(Window.c);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

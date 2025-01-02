@@ -9,7 +9,7 @@ public class Traversal_DIGUI {
     }
     //先序,中序和后序同理
     public static void preOrder(TreeNode node){
-        if (node==null){
+        if (node==null) {
             return;
         }
         System.out.print(node.val+" ");

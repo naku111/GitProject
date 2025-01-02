@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      height: 200px;
+      width: 200px;
+      display: none;
+      background-color: red;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <button>点我</button>
+  <div></div>
+  <script>
+    const but = document.querySelector('button')
+    but.addEventListener('click', function () {
+      document.querySelector('div').style.display = 'block'
+    })
+  </script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 public class Problem232 {
-     private Stack<Integer> s1;
+    private Stack<Integer> s1;
     private Stack<Integer> s2;
     //两个栈实现队列
     /*

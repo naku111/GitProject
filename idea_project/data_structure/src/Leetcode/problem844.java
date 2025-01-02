@@ -1,6 +1,7 @@
 package Leetcode;
 
 public class problem844 {
+    //比较含退格的字符串
     public static boolean backspaceCompare_AC(String S, String T) {
         //从后往前找，每次找到一个字符然后比较，不相等即返回false
         int i = S.length() - 1, j = T.length() - 1;

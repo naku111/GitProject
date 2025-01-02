@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box,
+    .box1 {
+      height: 200px;
+      width: 200px;
+      background-color: black;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">123</div>
+  <div class="box1">456</div>
+  <script>
+    const box = document.querySelector('.box')
+    // 根据CSS选择器来获取DOM元素 
+    // CSS选择器匹配的第一个元素,一个 HTMLElement对象。
+    box.style.background = 'red'
+    console.log(box)
+  </script>
+</body>
+
+</html>

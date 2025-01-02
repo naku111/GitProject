@@ -12,7 +12,7 @@
 .welcome {
     height: 30px;
     line-height: 30px;
-    font-size: 0;
+    font-size: 0;/*清除文字间距*/
     color: #666;
 }
 .welcome span,.welcome a {

@@ -66,10 +66,11 @@
     width: 80px;
     height: 36px;
     background-color: #DD302D;
-    vertical-align: top;
+    vertical-align: top;/*基线对齐，除了baseline都可以*/
     background-image: url('../images/serch_icon.png');
     background-repeat: no-repeat;
-    background-position: 28px 6px;
+    background-position: center;
+    /* background-position: 28px 6px; */
 }
 /* #endregion头部end */
 

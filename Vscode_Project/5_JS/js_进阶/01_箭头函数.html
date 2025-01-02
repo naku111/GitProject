@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.基本写法
+    const fmn = () => {
+      console.log("箭头函数");
+
+    }
+    // 2.只有一个参数
+    const fn = x => {
+      return x
+    }
+    // 3.只有一行代码
+    const fn1 = (x, y) => x + y
+    // 4.加括号的函数体返回对象字面量表达式
+    const fn2 = uname => ({ uname: uname })
+    // 5.箭头函数没有arguments动态参数，但有剩余函数...args
+    const fn3 = (...args) => {
+      let sum = 0
+      for (let index = 0; index < args.length; index++) {
+        sum += args[index];
+      }
+      return sum
+    }
+    fmn()
+    console.log(fn(3))
+    console.log(fn1(1, 2))
+    console.log(fn2('pink老师'))
+    console.log(fn3(1, 3, 4, 5, 6, 6))
+  </script>
+</body>
+
+</html>

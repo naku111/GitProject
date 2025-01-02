@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .header {
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    table,
+    td,
+    th {
+      border: 1px black solid;
+    }
+
+    th,
+    td {
+      padding: 10px 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h2 class="header">订单确认</h2>
+  <script>
+    //prompt读入的字符串！！！
+    let price = +prompt('请输入商品价格')
+    let number = +prompt('请输入商品数量')
+    let total = price * number
+    let adress = prompt('请输入收货地址')
+    document.write(`<table>
+    <tr>
+      <th>商品名称</th>
+      <th>商品价格</th>
+      <th>商品数量</th>
+      <th>总价</th>
+      <th>收货地址</th>
+    </tr>
+    <tr>
+      <td>小米手机</td>
+      <td>${price}</td>
+      <td>${number}</td>
+      <td>${total}</td>
+      <td>${adress}</td>
+    </tr>
+  </table>
+    `)
+  </script>
+</body>
+
+</html>

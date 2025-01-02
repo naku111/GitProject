@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <title>10_盒子的外边距_margin</title>
     <style>
+        /* 上margin、左margin：影响自己的位置；
+        下margin、右margin：影响后面兄弟元素
+        的位置 */
+        
+        /* 块级元素、行内块元素，均可以完美地设置四个方向的margin；
+        但行内元素，左右margin可以完美设置，上下margin设置无效。 */
         div {
             width: 400px;
             height: 400px;
 
-            /* margin-left: 10px; */
-            /* margin-right: 20px; */
-            /* margin-top: 30px; */
-            /* margin-bottom: 40px; */
+            margin-left: 50px;
+            margin-right: 100px;
+            margin-top: 50px;
+            margin-bottom: 40px;
 
             /* margin: 50px; */
             /* margin: 10px 20px; */

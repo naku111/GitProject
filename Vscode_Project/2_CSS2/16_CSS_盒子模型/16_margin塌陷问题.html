@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>16_margin塌陷问题</title>
     <style>
+        /* 第一个子元素的上margin会作用在父元素上，最后一个子元素的下margin会作用在父元素上。 */
+
+        /* 方案一： 给父元素设置不为 0 的padding。
+           方案二： 给父元素设置宽度不为 0 的border。
+           方案三：给父元素设置 css 样式 overflow:hidden */
         .outer {
             width: 400px;
             /* height: 400px; */
