@@ -17,7 +17,12 @@
   <p class="province"></p>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
-    axios({ url: 'http://hmajax.itheima.net/api/province' }).then(result => {
+    axios({
+      url: 'http://hmajax.itheima.net/api/city',
+      params: {
+        pname: '河北省'
+      }
+    }).then(result => {
       document.querySelector('.province').innerHTML = result.data.list.join('<br>')
     })
   </script>
