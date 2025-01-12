@@ -42,26 +42,40 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
+    /**
+     * 目标: 根据省份和城市名字, 查询对应的地区列表
+    */
+    // 1. 查询按钮-点击事件
     document.querySelector('.sel-btn').addEventListener('click', () => {
-      let pName = document.querySelector('.province').value
-      let cName = document.querySelector('.city').value
-      axios({
-        url: 'http://hmajax.itheima.net/api/area',
-        params: {
-          pname: pName,
-          cname: cName
-        }
-      }).then(result => {
-        console.log(result)
-        let list = result.data.list
-        console.log(list)
-        let theli = list.map(areaName => `<li class="list-group-item">${areaName}</li>`).join(' ')
-        console.log(theli)
-        document.querySelector('.list-group').innerHTML = theli
-      })
-    }
-    )
+      // 2. 收集省份和城市名字
+      const pname = document.querySelector('.province').value
+      const cname = document.querySelector('.city').value
 
+      // 3. 组织查询参数字符串
+      const qObj = {
+        pname,
+        cname
+      }
+      // 查询参数对象 -> 查询参数字符串
+      const paramsObj = new URLSearchParams(qObj)
+      const queryString = paramsObj.toString()
+      console.log(queryString)
+
+      // 4. 使用XHR对象，查询地区列表
+      const xhr = new XMLHttpRequest()
+      xhr.open('GET', `http://hmajax.itheima.net/api/area?${queryString}`)
+      xhr.addEventListener('loadend', () => {
+        console.log(xhr.response)
+        const data = JSON.parse(xhr.response)
+        console.log(data)
+        const htmlStr = data.list.map(areaName => {
+          return `<li class="list-group-item">${areaName}</li>`
+        }).join('')
+        console.log(htmlStr)
+        document.querySelector('.list-group').innerHTML = htmlStr
+      })
+      xhr.send()
+    })
   </script>
 </body>
 
