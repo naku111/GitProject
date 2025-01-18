@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>天气案例</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div class="root">
+    <h2>今天天气很{{weather}}</h2>
+    <button @click="changeWeather">切换天气</button>
+  </div>
+</body>
+
+<script>
+  const vm = new Vue({
+    el: '.root',
+    data: {
+      isHot: true
+    },
+    computed: {
+      weather() {
+        // 使用this关键字来引用data中的属性
+        return this.isHot ? '炎热' : '凉爽';
+      }
+    },
+    methods: {
+      changeWeather() {
+        // 切换isHot的值
+        this.isHot = !this.isHot;
+      }
+    }
+  })
+</script>
+
+</html>
